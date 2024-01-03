@@ -79,7 +79,8 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:torch", "tfc:torch")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:anvil", "tfc:metal/anvil/wrought_iron")
   event.replaceInput({ type: "minecraft:crafting_shapeless" }, "minecraft:slime_ball", "tfc:glue")
-
+  event.replaceInput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
+  event.replaceOutput({},"minecraft:iron_ingot", "tfc:metal/ingot/cast_iron")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:slime_ball", "tfc:glue")
   event.replaceInput({ type: "minecraft:crafting_shaped" }, "minecraft:cobblestone_slab", "#forge:slabs/cobblestone")
   //remove furnace existance
@@ -89,9 +90,9 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
   //Simpleplanes
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_axe", "tfc:metal/axe/steel")
   event.replaceInput({ mod: "simpleplanes"}, "minecraft:iron_pickaxe", "tfc:metal/pickaxe/steel")
-  event.replaceOutput({ id: "simpleplanes:furnace_engine" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
-  event.replaceOutput({ id: "simpleplanes:liquid_engine" }, "minecraft:blast_furnace", "railcraft:liquid_fueled_firebox")
-  event.replaceOutput({ id: "simpleplanes:electric_engine" }, "#forge:ingots/copper", "immersiveengineering:coil_lv")
+  event.replaceInput({ id: "simpleplanes:furnace_engine" }, "minecraft:blast_furnace", "railcraft:solid_fueled_firebox")
+  event.replaceInput({ id: "simpleplanes:liquid_engine" }, "minecraft:blast_furnace", "railcraft:liquid_fueled_firebox")
+  event.replaceInput({ id: "simpleplanes:electric_engine" }, "#forge:ingots/copper", "immersiveengineering:coil_lv")
 
   //Corail
 
@@ -157,7 +158,7 @@ let replaceRecipes = (/** @type {Internal.RecipesEventJS} */ event) => {
     event.replaceInput({ id: `tfships:${wood}_brigg`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
     event.replaceInput({ id: `tfships:${wood}_galley`}, `tfc:wood/boat/${wood}`, `gregitas:${wood}_hull_segment`)
   })
-
+  event.replaceInput({id: "smallships:sail"}, "#minecraft:wool", "immersiveengineering:hemp_fabric")
   //Storage Drawers
   event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:stone", "#forge:stone")
   event.replaceInput({ id: "storagedrawers:controller"}, "minecraft:diamond", "create:pulse_repeater")
